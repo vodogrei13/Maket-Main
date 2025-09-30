@@ -5,11 +5,11 @@ export function initAboutSlider() {
     let images = [{
         url: "./img/about-1.png",
     }, {
-        url: "./img/about-1.png",
+        url: "./img/about-2.png",
     }, {
         url: "./img/about-1.png",
     }, {
-        url: "./img/about-1.png",
+        url: "./img/about-2.png",
     }];
 
     let currentSlide = 0;

@@ -2,13 +2,13 @@
 export function initNewsSlider() {
     // Массив Картинок
     let images = [{
-        url: "./img/news.png",
+        url: "./img/news-1.png",
     }, {
-        url: "./img/news.png",
+        url: "./img/news-2.png",
     }, {
-        url: "./img/news.png",
+        url: "./img/news-1.png",
     }, {
-        url: "./img/news.png",
+        url: "./img/news-2.png",
     }];
 
     let currentSlide = 0;

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>MAKET</title>
 </head>
@@ -182,13 +183,13 @@
             <!-- 1: Бренд / О компании -->
             <div class="footer-col brand">
               <div class="footer-brand">
-                <div class="logo" aria-hidden="true">
+                <a href="/" class="logo" aria-hidden="true">
                   <img
                       src="./img/header/logo fdm.svg"
                       alt="header"
                       class="image__logo"
                   />
-              </div>
+                </a>
                 <div class="brand-text">
                   <p>
                     Мы делаем мебельный процесс быстрее: от заказа до доставки, без компромиссов.
@@ -214,7 +215,7 @@
                 </div>
                 <div class="socials" aria-label="Социальные сети">
                   <!-- простые SVG-иконки-плейсхолдеры -->
-                  <a href="#" aria-label="ВКонтакте" title="ВКонтакте">
+                  <a href="https://vk.com/fdmrus" target="_blank" aria-label="ВКонтакте" title="ВКонтакте">
                     <img src="./img/footer/vk.svg" alt="Вконтакте" class="soc_icon">
                   </a>
                   <a href="#" aria-label="WhatsApp" title="WhatsApp">
@@ -313,6 +314,7 @@
         </footer>
       </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>
