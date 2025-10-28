@@ -32,7 +32,6 @@
                 <img src="./img/header/basket.svg" alt="Корзина" class="header__menu_icon_item_basket">
                 <img src="./img/header/about.svg" alt="Профиль" class="header__menu_icon_item_prof">
                 <img src="./img/header/phone-2.svg" alt="Звонок" class="header__menu_icon_item">
-                <img src="./img/header/help-2.svg" alt="Помощь" class="header__menu_icon_item">
             </div>
           </div>
         </section>
@@ -70,6 +69,11 @@
                   <img src="./img/help.png" alt="Поддержка" class="hero__img_item_help">
                   <span class="img__text">Поддержка</span>
                 </div>
+
+                <div class="hero__image-wrapper_hover">
+                  <span class="img__text_hover">Что-то не так с заказом?</span>
+                  <button class="btn__hover">Заполнить форму</button>
+                </div>
               </a>
             </div>
           </section>
@@ -88,7 +92,6 @@
               
               <div class="card__item">
                 <div class="card__text">
-                  <p class="card__text_item">более</p>
                   <span class="card__text_red">220</span>
                   <p class="card__text_item">декоров ЛДСП</p>
                 </div>
@@ -96,7 +99,6 @@
 
               <div class="card__item">
                 <div class="card__text">
-                  <p class="card__text_item">свыше</p>
                   <span class="card__text_red">500</span>
                   <p class="card__text_item">наименований столешниц</p>
                 </div>
@@ -104,7 +106,6 @@
 
               <div class="card__item">
                 <div class="card__text">
-                  <p class="card__text_item">более</p>
                   <span class="card__text_red">50 000</span>
                   <p class="card__text_item">наименований фурнитуры</p>
                 </div>
@@ -112,7 +113,6 @@
 
               <div class="card__item">
                 <div class="card__text">
-                  <p class="card__text_item">работает</p>
                   <span class="card__text_red">120+</span>
                   <p class="card__text_item">талантливых специалистов</p>
                 </div>
@@ -120,7 +120,6 @@
 
               <div class="card__item">
                 <div class="card__text">
-                  <p class="card__text_item">осуществляем более</p>
                   <span class="card__text_red">1400</span>
                   <p class="card__text_item">доставок<br/>ежемесячно</p>
                 </div>
@@ -133,6 +132,11 @@
                     <div class="slider__images_about"></div>  
                 </div>
             </div>
+            <div class="about_btn">
+              <button class="about_btn_item">
+                Узнать о нас больше
+              </button>
+            </div>
             <div class="block__social">
               <div class="youtube">
                 <a href="https://www.youtube.com/watch?v=bpz1gybCZKU" data-fancybox class="youtube__btn"><img src="./img/logos_youtube.svg" alt="Youtube" class="youtube__img"></a>
@@ -142,14 +146,9 @@
                 <a href="https://vk.com/fdmrus" target="_blank" class="vk__btn"><img src="./img/ВК_2.svg" alt="vk" class="vk__img"></a>
               </div>
             </div>
-            <div class="about_btn">
-              <button class="about_btn_item">
-                Узнать о нас больше
-              </button>
-            </div>
           </div>
 
-          <div class="block__scheme">
+          <!-- <div class="block__scheme">
           <h2 class="scheme__title">Схема работы</h2>
           <div class="icon__scheme">
             <div class="card__scheme">
@@ -171,7 +170,7 @@
             <p class="shema__text">Сделайте тестовый заказ для проверки правильности регистрации</p>
             <p class="shema__text">Заказывайте на сайте по выгодным ценам</p>
           </div>
-        </div>
+        </div> -->
 
           </section>
         </div>
@@ -182,36 +181,39 @@
           <div class="footer-inner">
             <!-- 1: Бренд / О компании -->
             <div class="footer-col brand">
-              <div class="footer-brand">
-                <a href="/" class="logo" aria-hidden="true">
-                  <img
-                      src="./img/header/logo fdm.svg"
-                      alt="header"
-                      class="image__logo"
-                  />
-                </a>
-                <div class="brand-text">
-                  <p>
-                    Мы делаем мебельный процесс быстрее: от заказа до доставки, без компромиссов.
-                  </p>
-                </div>
-              </div>
 
-              <div style="margin-top: 20px">
+              <div>
                 <div class="newsletter" aria-label="Подписка на новости">
-                  <h4>Хотите стать диллером?</h4>
-                  <form
-                    onsubmit="event.preventDefault();alert('Спасибо за подписку!');"
-                  >
-                    <input
-                      type="email"
-                      placeholder="Ваша почта"
-                      aria-label="Email"
-                    />
-                    <button type="submit" aria-label="Подписаться">
-                      Подписаться
-                    </button>
-                  </form>
+                  <h4 class="social__title">Хотите стать нашим партнёром?</h4>
+                  <div class="footer__form">
+                    <form
+                      onsubmit="event.preventDefault();alert('Спасибо за обращение!');"
+                    >
+                      <input
+                        type="name"
+                        placeholder="ФИО"
+                        aria-label="Name"
+                      />
+                      <input
+                        type="email"
+                        placeholder="E-mail"
+                        aria-label="Email"
+                      />
+                      <input
+                        type="phone"
+                        placeholder="Номер телефона"
+                        aria-label="Phone"
+                      />
+                      <input
+                        type="company"
+                        placeholder="Ваша компания"
+                        aria-label="Company"
+                      />
+                      <button type="submit" aria-label="отправить форму">
+                        Отправить форму
+                      </button>
+                    </form>
+                  </div>
                 </div>
                 <div class="socials" aria-label="Социальные сети">
                   <!-- простые SVG-иконки-плейсхолдеры -->
@@ -234,58 +236,84 @@
 
             <!-- 2: Каталог / меню -->
             <div class="footer-col links">
-              <h4 class="menu_hero">Каталог</h4>
+              <h4 class="menu_hero"><a href="#">Каталог</a></h4>
               <nav class="footer-links" aria-label="Каталог товаров">
+                <a href="#" class="link_item">Акции</a>
                 <a href="#" class="link_item">ЛДСП, МДФ</a>
-                <a href="#" class="link_item">Столешницы</a>
-                <a href="#" class="link_item">Мойки и аксессуары</a>
-                <a href="#" class="link_item">Петли</a>
+                <a href="#" class="link_item">Столешницы, стеновые панели, кромка для столешниц</a>
                 <a href="#" class="link_item">Ручки</a>
-                <a href="#" class="link_item">Опоры, колеса, подпятники</a>
-                <a href="#" class="link_item">Хеттих</a>
-                <a href="#" class="link_item">и др.</a>
+                <a href="#" class="link_item">Бортики, плинтусы и аксессуары</a>
+                <a href="#" class="link_item">Кромка</a>
+                <a href="#" class="link_item">Встраиваемое оборудования для кухни</a>
+                <a href="#" class="link_item">Раздвижные и складные системы</a>
+                <a href="#" class="link_item">Хеттик</a>
+                <a href="#" class="link_item">Цоколь и комплектующие для цоколя</a>
+                <a href="#" class="link_item">Мойки и аксессуары</a>
+                <a href="#" class="link_item">Кухонные профиля и комплектующие</a>
               </nav>
             </div>
 
             <!-- 3: Информация -->
             <div class="footer-col info">
-              <h4 class="menu_hero">Услуги</h4>
+              <h4 class="menu_hero"><a href="#">Услуги производства</a></h4>
               <div class="footer-links">
                 <a href="#" class="link_item">Двери-купе</a>
-                <a href="#" class="link_item">фасады</a>
-                <a href="#" class="link_item">Кухонные модули</a>
                 <a href="#" class="link_item">Распил</a>
+                <a href="#" class="link_item">Фасады</a>
+                  <ul class="footer__list">
+                    <li class="footer__list_item"><a href="#">Скат</a></li>
+                    <li class="footer__list_item"><a href="">ТБМ и ФИП</a></li>
+                    <li class="footer__list_item"><a href="#">EVOSOFT</a></li>
+                    <li class="footer__list_item"><a href="#">DUCO</a></li>
+                    <li class="footer__list_item"><a href="#">ADELKREIS</a></li>
+                    <li class="footer__list_item"><a href="#">Алюминиевые фасады</a></li>
+                  </ul>
+                <a href="#" class="link_item">Кухонные модули</a>
                 <a href="#" class="link_item">Мебель для мебельщика</a>
                 <a href="#" class="link_item">Изготовление столешниц</a>
-                <a href="#" class="link_item">Компакт плиты</a>
-                <a href="#" class="link_item">Алюминиевые витрины</a>
+                <a href="#" class="link_item">Обработка компакт плиты</a>
+                <a href="#" class="link_item">Фасады с рамочным ал профилем</a>
               </div>
             </div>
 
             <!-- 4: Контакты -->
             <div class="footer-col contact">
               <h4 class="menu_hero">Контакты</h4>
-              <div class="phone">8 (800) 550-8945</div>
               <p class="email_container">
                 E-mail: <a href="mailto:sales@fdm76.ru" class="email">sales@fdm76.ru</a>
               </p>
-              <p class="adress">Ярославль, Ленинградский пр-т, 33, ТЦ "Омега", офис 216</p>
-              <p class="map">
-                <div style="position:relative;overflow:hidden;">
-                  <a href="https://yandex.ru/maps/org/fdm/68254473782/?utm_medium=mapframe&utm_source=maps" 
-                      style="color:#eee;font-size:12px;position:absolute;top:0px;">ФДМ</a>
-                  <a href="https://yandex.ru/maps/16/yaroslavl/category/furniture_fittings_and_components/184106632/?utm_medium=mapframe&utm_source=maps" 
-                      style="color:#eee;font-size:12px;position:absolute;top:14px;">Мебельная фурнитура и комплектующие в Ярославле</a>
-                  <a href="https://yandex.ru/maps/16/yaroslavl/category/cabinet_furniture/184107869/?utm_medium=mapframe&utm_source=maps" 
-                      style="color:#eee;font-size:12px;position:absolute;top:28px;">Корпусная мебель в Ярославле</a>
-                  <iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=39.822087%2C57.674065&mode=poi&poi%5Bpoint%5D=39.821044%2C57.673778&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D68254473782&z=17.82" 
-                      width="470" 
-                      height="335" 
-                      frameborder="1" 
-                      allowfullscreen="true" style="position:relative;">
-                  </iframe>
-              </div>
-              </p>
+              <ul class="footer__adress_list">
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfgE-oJ" class="adress_city">Ярославль</a>, Ленинградский пр-т, 33, ТЦ "Омега", офис 216
+                  <br> <a class="phone">8 800 550-89-45</a>
+                  <br><a href="https://yandex.ru/maps/-/CLfgIFO8" class="adress_sklad">Склад:</a>
+                  <br>Ярославль, пр-т Ленинградский, 22с1
+                </li>
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfgM67f" class="adress_city">Вологда</a>, ул.Ленинградская 128
+                  <br> <a class="phone">8 920 106-07-11</a>
+                  <br><a href="https://yandex.ru/maps/-/CLfgQQ9T" class="adress_sklad">Склад:</a>
+                  <br>Вологда, ул.Гагарина 86Б
+                </li>
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfg4X~o" class="adress_city">Кострома</a>, 2-я Волжская ул, 2В офис 5
+                  <br> <a class="phone">8 800 550-89-45 (доб.90)</a>
+                </li>
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfgaEiW" class="adress_city">Череповец</a>, ул.Гоголя 47, 1-й этаж
+                  <br> <a class="phone">8 920 142-83-23</a>
+                </li>
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfgaQiT" class="adress_city">Рыбинск</a>, ул.Ломоносова 35, офис 23, 2-й этаж
+                  <br> <a class="phone">8 920 149-23-95</a>
+                </li>
+                <li class="adress_item">
+                  <a href="https://yandex.ru/maps/-/CLfga4NX" class="adress_city">Владимир</a>, ул.Куйбышева 16А, офис 1
+                  <br> <a class="phone">8 920 110-35-00</a>
+                  <br><a href="https://yandex.ru/maps/-/CLfgaJnV" class="adress_sklad">Склад:</a>
+                  <br>Владимир, ул.Ноябрьская д.134А/1
+                </li>
+              </ul>
               </div>
             </div>
           
@@ -300,15 +328,9 @@
             role="region"
             aria-label="Информация внизу футера"
           >
-            <div>© <span id="year"></span> FDM. Все права защищены.</div>
+            <div class="political_text">© <span id="year"></span> FDM. Все права защищены.</div>
             <div class="political">
-              Политика конфиденциальности · Условия использования
-            </div>
-            <div class="muted">
-              Разработка:
-              <a href="#" style="color: var(--text); font-weight: 600"
-                >Vodogrei</a
-              >
+              <a href="#" class="political_text">Политика конфиденциальности · Условия использования</a>
             </div>
           </div>
         </footer>
