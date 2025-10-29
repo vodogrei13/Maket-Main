@@ -251,8 +251,33 @@ body {
 .hero__link {
   position: relative;
   display: inline-block;
+  height: 186.3px;
 }
 
+.hero__link_help {
+  position: relative;
+  display: inline-block;
+  height: 396px;
+}
+/* Стили для кнопок Каталог и Услуги */
+.catalog-btn, 
+.services-btn {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 
+                0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.catalog-btn:hover, 
+.services-btn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 
+                0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект при нажатии */
+.catalog-btn:active, 
+.services-btn:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 
+                0 3px 10px rgba(0, 0, 0, 0.1);
+}
 
 .img__text {
   position: absolute;
