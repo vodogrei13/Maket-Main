@@ -33,7 +33,8 @@ body {
   min-width: 100%;
   max-height: 110px;
   background-color: #fff;
-  /* box-shadow: 0px 2px 4px 2px rgba(173, 173, 173, .2); */
+  box-shadow: 0px 22px 17px 12px rgba(173, 173, 173, .2);
+  padding-bottom: 16px;
 }
 .header__container {
   max-width: 1340px;
@@ -111,6 +112,108 @@ body {
   align-self: center;
   align-content: center;
   gap: 13px;
+}
+
+/* Стили для выпадающего меню профиля */
+.profile-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 280px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.profile-dropdown-container:hover .profile-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content {
+    padding: 0;
+}
+
+.dropdown-content.unauthorized {
+    display: block; /* Показываем для неавторизованных */
+}
+
+.dropdown-content.authorized {
+    display: none; /* Скрываем для авторизованных */
+}
+
+/* Если пользователь авторизован, показываем соответствующий контент */
+.user-logged-in .dropdown-content.unauthorized {
+    display: none;
+}
+
+.user-logged-in .dropdown-content.authorized {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 15px 20px;
+    color: #3b3c43;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f8;
+    color: #e11f27;
+    padding-left: 25px;
+}
+
+.dropdown-item.logout {
+    color: #e11f27;
+    font-weight: 500;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 5px;
+}
+
+/* Стрелка у выпадающего меню */
+.profile-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .profile-dropdown {
+        width: 250px;
+        right: -50px;
+    }
+    
+    .profile-dropdown::before {
+        right: 60px;
+    }
 }
 
 .header__menu_icon_item {
