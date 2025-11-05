@@ -127,13 +127,16 @@ body {
     width: 280px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 
+                0 8px 20px rgba(0, 0, 0, 0.18),
+                0 4px 8px rgba(0, 0, 0, 0.12);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 1000;
     margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .profile-dropdown-container:hover .profile-dropdown {
@@ -171,6 +174,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     border-bottom: 1px solid #f0f0f0;
+    border-radius: 12px;
     transition: all 0.2s ease;
 }
 
@@ -229,13 +233,16 @@ body {
     width: 180px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 
+                0 8px 20px rgba(0, 0, 0, 0.18),
+                0 4px 8px rgba(0, 0, 0, 0.12);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 1000;
     margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .call-dropdown-container:hover .call-dropdown {
@@ -416,16 +423,13 @@ body {
   height: 396px;
 }
 /* Стили для кнопок Каталог и Услуги */
-.catalog-btn, 
-.services-btn {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 
-                0 10px 25px rgba(0, 0, 0, 0.15);
+.catalog__container:hover, 
+.services__container:hover {
+  transition: 0.3s ease-in-out;
 }
-
-.catalog-btn:hover, 
-.services-btn:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 
-                0 12px 35px rgba(0, 0, 0, 0.2);
+.catalog__container:hover, 
+.services__container:hover {
+  transform: scale(1.01);
 }
 
 /* Эффект при нажатии */
@@ -629,6 +633,7 @@ body {
   font-size: clamp(14px, 0.833vw, 25px);
   color: #111;
   font-weight: 200;
+  padding: 0 10px;
 }
 .card__text_red {
   margin: 0;
@@ -691,12 +696,20 @@ body {
   margin-bottom: 3rem;
 }
 .youtube__img {
-  width: 285px;
-  height: 64px;
+  width: 230px;
+  height: 40px;
+  transition: 0.2s ease-in-out;
 }
 .vk__img {
-  width: 384px;
-  height: 67px;
+  width: 334px;
+  height: 44px;
+  transition: 0.2s ease-in-out;
+}
+.youtube__img:hover {
+  transform: scale(1.05);
+}
+.vk__img:hover {
+  transform: scale(1.05);
 }
 /* Стили для Fancybox модального окна */
 .fancybox__container {
@@ -786,7 +799,7 @@ body {
   font-size: clamp(30px, 1.875vw, 50px);
   font-weight: 800;
   line-height: auto;
-  padding: 19px 71px 11px 76px;
+  padding: 10px 55px 10px 55px;
   border-radius: 20px;
   border: none;
   box-shadow: 0 0 4px 1px rgba(59, 60, 67, 0.5);

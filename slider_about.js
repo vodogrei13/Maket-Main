@@ -20,7 +20,7 @@ export function initAboutSlider() {
         options = options || {
             dots: true,
             autoplay: true,
-            interval: 3000
+            interval: 8000
         }
 
         const sliderWrapper = document.querySelector('.slider_about');
@@ -89,7 +89,7 @@ export function initAboutSlider() {
 
     let sliderOptions = {
         autoplay: true,
-        interval: 4000
+        interval: 8000
     };
     initSlider(images, sliderOptions);
 }
