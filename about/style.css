@@ -58,7 +58,7 @@ body {
   cursor: pointer;
 }
 .header_found {
-  margin-right: 151px;
+  margin-right: 125px;
 }
 .found__input {
   width: 250px;
@@ -87,7 +87,7 @@ body {
 }
 
 .header__nav {
-  margin-right: 29px;
+  margin-right: 56px;
 }
 
 .header__nav_list {
@@ -95,7 +95,7 @@ body {
   padding: 0;
   display: flex;
   list-style: none;
-  gap: 46px;
+  gap: 36px;
 }
 .header__nav_item {
   font-size: clamp(14px, 1.04167vw, 50px);
