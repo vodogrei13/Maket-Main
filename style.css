@@ -453,8 +453,9 @@ body {
   z-index: 2;
   transition: all 0.3s ease;
   text-align: center;
-  width: 100%;
+  width: 50%;
   pointer-events: none;
+  text-wrap: wrap;
 }
 
 .img__text_hover {
