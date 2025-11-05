@@ -216,6 +216,59 @@ body {
     }
 }
 
+/* Стили для выпадающего меню телефона */
+.call-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.call-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.call-dropdown-container:hover .call-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Стрелка у выпадающего меню телефона */
+.call-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+}
+
+/* Адаптивность для меню телефона */
+@media (max-width: 768px) {
+    .call-dropdown {
+        width: 160px;
+        right: -30px;
+    }
+    
+    .call-dropdown::before {
+        right: 40px;
+    }
+}
+
 .header__menu_icon_item {
   width: 35px;
   height: auto;

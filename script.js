@@ -78,13 +78,38 @@ function initProfileDropdown() {
 
 }
 
+function initCallDropdown() {
+    const callContainer = document.querySelector('.call-dropdown-container');
+    
+    // Закрытие меню при клике вне его
+    document.addEventListener('click', function(e) {
+        if (!callContainer.contains(e.target)) {
+            const dropdown = callContainer.querySelector('.call-dropdown');
+            dropdown.style.opacity = '0';
+            dropdown.style.visibility = 'hidden';
+            dropdown.style.transform = 'translateY(-10px)';
+        }
+    });
+    
+    // Обработчик для ссылки "Написать"
+    const writeBtn = document.querySelector('.call-dropdown .dropdown-item:last-child');
+    if (writeBtn) {
+        writeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Здесь можно добавить логику открытия формы обратной связи
+            alert('Форма обратной связи будет открыта здесь');
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     try {
         initNewsSlider();
         initAboutSlider();
         initShemaAnim();
         initYoutubeOpen();
-        initProfileDropdown(); // Добавьте эту строку
+        initProfileDropdown();
+        initCallDropdown();
         document.getElementById("year").textContent = new Date().getFullYear();
         console.log('Все скрипты загружены успешно');
     } catch (error) {
