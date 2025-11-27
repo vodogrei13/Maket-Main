@@ -14,75 +14,61 @@
 </head>
 <body>
     <div class="body">
-        <header class="new-header">
-    <div class="header__container">
-        <div class="header_logo_container">
-            <a href="/"><img src="./img/header/logo fdm.svg" alt="FDM" class="image__logo"></a>
-        </div>
-
-        <!-- Мобильное меню (гамбургер) -->
-        <div class="mobile-menu-toggle" id="mobileMenuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="header_found">
-            <input type="text" class="found__input">
-        </div>
-
-        <nav class="header__nav" id="mainNav">
-            <ul class="header__nav_list">
-                <li class="header__nav_item"><a href="/catalog/">Каталог</a></li>
-                <li class="header__nav_item"><a href="/services/">Услуги производства</a></li>
-                <li class="header__nav_item"><a href="/contacts/">Контакты</a></li>
-                <li class="header__nav_item"><a href="/support/">Поддержка</a></li>
-            </ul>
-        </nav>
-
-        <div class="header__menu_icon">
-            <!-- Корзина -->
-            <div class="basket-container" style="position: relative;">
-				<a href="/basket/">
-					<img src="./img/header/basket-3.svg" alt="Корзина" class="header__menu_icon_item_basket">
-					<span class="cart-count" id="basket-count"><?= $basketCount ?></span>
-				</a>
-			</div>
-
-            <!-- Профиль -->
-			<div class="profile-dropdown-container">
-				<img src="./img/header/about-3.svg" alt="Профиль" class="header__menu_icon_item_prof">
-				<div class="profile-dropdown">
-					<?php if ($USER->IsAuthorized()): ?>
-						<div class="dropdown-content authorized">
-							<a href="/profile/the-binding-profile-of-the-firm/" class="dropdown-item">Привязка профиля к фирме</a>
-							<a href="/profile/my-orders/" class="dropdown-item">История заказов</a>
-							<a href="/profile/personal-data/" class="dropdown-item">Личные данные</a>
-							<a href="http://fdmrus.ru//" class="dropdown-item">Мой каталог</a>
-							<a href="/?logout=yes" class="dropdown-item logout">Выйти</a>
-						</div>
-					<?php else: ?>
-						<div class="dropdown-content unauthorized">
-							<a href="/auth/" class="dropdown-item">Вход</a>
-							<a href="/registration/" class="dropdown-item">Регистрация</a>
-						</div>
-					<?php endif; ?>
-				</div>
-			</div>
-
-            <!-- Звонок -->
-            <div class="call-dropdown-container">
-                <img src="./img/header/phone-3.svg" alt="Звонок" class="header__menu_icon_item">
-                <div class="call-dropdown">
-                    <div class="dropdown-content">
-                        <a href="tel:+78005508945" class="dropdown-item">Позвонить</a>
-                        <a href="#" class="dropdown-item">Написать</a>
-                    </div>
-                </div>
+        <section class="header">
+          <div class="header__container">
+            <div class="header_logo_container">
+              <a href="./index.html"><img src="./img/header/logo fdm.svg" alt="header" class="image__logo"></a>
             </div>
-        </div>
-    </div>
-</header>
+            <div class="header_found">
+                <input type="text" class="found__input">
+            </div>
+            <div class="header__nav">
+                <ul class="header__nav_list">
+                    <li class="header__nav_item">Каталог</li>
+                    <li class="header__nav_item">Услуги производства</li>
+                    <li class="header__nav_item">Контакты</li>
+                    <li class="header__nav_item">Поддержка</li>
+                </ul>
+            </div>
+            <div class="header__menu_icon">
+              <img src="./img/header/basket.svg" alt="Корзина" class="header__menu_icon_item_basket">
+              <div class="profile-dropdown-container">
+                  <img src="./img/header/about.svg" alt="Профиль" class="header__menu_icon_item_prof">
+                  <div class="profile-dropdown">
+                      <!-- Для неавторизованного пользователя -->
+                      <div class="dropdown-content unauthorized">
+                          <a href="#" class="dropdown-item">Вход</a>
+                          <a href="#" class="dropdown-item">Регистрация</a>
+                      </div>
+                      <!-- Для авторизованного пользователя -->
+                      <div class="dropdown-content authorized">
+                          <a href="#" class="dropdown-item">Привязка профиля к фирме</a>
+                          <a href="#" class="dropdown-item">История заказов</a>
+                          <a href="#" class="dropdown-item">Личные данные</a>
+                          <a href="#" class="dropdown-item">Мой каталог</a>
+                          <a href="#" class="dropdown-item">Помощь</a>
+                          <a href="#" class="dropdown-item logout">Выйти</a>
+                      </div>
+                  </div>
+              </div>
+              <div class="call-dropdown-container">
+                  <img src="./img/header/phone-2.svg" alt="Звонок" class="header__menu_icon_item">
+                  <div class="call-dropdown">
+                      <div class="dropdown-content">
+                          <a href="tel:+78005508945" class="dropdown-item">Позвонить</a>
+                          <a href="#" class="dropdown-item">Написать</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+
+          <!-- УДАЛИТЬ В ПРОДАКШН - ЭТО ТЕСТ! -->
+          <button id="toggleAuth" style="position: fixed; top: 10px; left: 10px; z-index: 9999;">
+              Переключить статус авторизации
+          </button>
+
+        </section>
 
       <section class="main">
         <div class="block">
